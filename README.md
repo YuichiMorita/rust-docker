@@ -8,6 +8,7 @@ Dockerfile for diesel
 - postgresql-devel
 - gcc
 - openssl
+- wkhtmltopdf
 
 ## Author
 
