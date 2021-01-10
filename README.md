@@ -3,7 +3,7 @@
 Dockerfile for diesel
 
 - Centos7
-- Rust
+- Rust(1.49.0)
 - diesel-cli(postgres)
 - postgresql-devel
 - gcc
