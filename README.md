@@ -8,7 +8,6 @@ Dockerfile for diesel
 - postgresql-devel
 - gcc
 - openssl
-- wkhtmltopdf
 
 ## Author
 
@@ -17,9 +16,9 @@ Yuichi Morita (info@reju.jp)
 ## 構築方法
 
 ```bash
-docker build -t jokerthewild/rust-docker .
+docker build -t jokerthewild/rust-docker-nosccache .
 docker images
-docker run -it IMAGE
+docker run -it image
 docker exec -it コンテナ名 bash
 ```
 
@@ -27,5 +26,5 @@ docker exec -it コンテナ名 bash
 
 ```bash
 docker login
-docker push jokerthewild/rust-docker:latest
+docker push jokerthewild/rust-docker-nosccache:latest
 ```
