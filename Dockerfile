@@ -16,3 +16,6 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v3.23.0-rc4/cmake-3.
 RUN wget --no-check-certificate https://ftp.gnu.org/gnu/glibc/glibc-2.18.tar.gz && tar zxvf glibc-2.18.tar.gz && cd glibc-2.18 && mkdir build &&cd build && ../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
 
 RUN localedef -f UTF-8 -i ja_JP ja_JP
+
+RUN touch /usr/local/cargo/config && echo -e "[net]\ngit-fetch-with-cli = true" >> /usr/local/cargo/config
+RUN rustup update

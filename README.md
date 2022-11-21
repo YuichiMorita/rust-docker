@@ -16,7 +16,7 @@ Yuichi Morita (info@reju.jp)
 ## 構築方法
 
 ```bash
-docker build -t jokerthewild/rust-docker-nosccache .
+docker build --no-cache -t jokerthewild/rust-docker .
 docker images
 docker run -it image
 docker exec -it コンテナ名 bash
@@ -26,5 +26,5 @@ docker exec -it コンテナ名 bash
 
 ```bash
 docker login
-docker push jokerthewild/rust-docker-nosccache:latest
+docker push jokerthewild/rust-docker:latest
 ```
