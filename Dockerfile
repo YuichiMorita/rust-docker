@@ -22,3 +22,4 @@ RUN touch /usr/local/cargo/config && echo -e "[net]\ngit-fetch-with-cli = true" 
 RUN rustup update
 
 RUN cd /etc/pki/tls/certs/ &&wget http://curl.haxx.se/ca/cacert.pem --no-check-certificate&&mv ./cacert.pem ./ca-bundle.crt
+RUN yum -y update ca-certificates
