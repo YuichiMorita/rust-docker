@@ -6,6 +6,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN yum -y install wget openssl openssl-devel postgresql-devel gcc gcc-c++ libpng libjpeg icu libX11 libXext libXrender xorg-x11-fonts-Type1 xorg-x11-fonts-75dpi git ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts freetype-devel freetype2-devel expat-devel libxml2-devel libxslt-devel pkg-config  libssl-dev libfreetype6-dev libexpat1-dev libxcb-composite0-dev libasound2-dev
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm && rpm -Uvh wkhtmltox-0.12.6-1.centos7.x86_64.rpm
 
 RUN cargo install diesel_cli --no-default-features --features postgres
 
