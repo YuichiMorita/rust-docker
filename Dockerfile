@@ -20,3 +20,5 @@ RUN localedef -f UTF-8 -i ja_JP ja_JP
 
 RUN touch /usr/local/cargo/config && echo -e "[net]\ngit-fetch-with-cli = true" >> /usr/local/cargo/config
 RUN rustup update
+
+RUN cd /etc/pki/tls/certs/ &&wget http://curl.haxx.se/ca/cacert.pem --no-check-certificate&&mv ./cacert.pem ./ca-bundle.crt
